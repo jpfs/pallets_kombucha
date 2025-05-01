@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kombucha Bottle Pallet Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <div class="logo-icon">🍶</div>
+          <h1>Kombucha Bottle Pallet Calculator</h1>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <section class="config-section">
+        <h2>Bottle Configurations</h2>
+        <div class="form-grid">
+          <div>
+            <h3>Small Bottle (330ml)</h3>
+            <div class="form-group">
+              <label for="small-height">Height (mm)</label>
+              <input type="number" id="small-height" value="157" />
+            </div>
+            <div class="form-group">
+              <label for="small-diameter">Diameter (mm)</label>
+              <input type="number" id="small-diameter" value="65" />
+            </div>
+            <div class="form-group">
+              <label for="small-volume">Volume (ml)</label>
+              <input type="number" id="small-volume" value="330" />
+            </div>
+          </div>
+
+          <div>
+            <h3>Large Bottle (1L)</h3>
+            <div class="form-group">
+              <label for="large-height">Height (mm)</label>
+              <input type="number" id="large-height" value="215" />
+            </div>
+            <div class="form-group">
+              <label for="large-diameter">Diameter (mm)</label>
+              <input type="number" id="large-diameter" value="90" />
+            </div>
+            <div class="form-group">
+              <label for="large-volume">Volume (ml)</label>
+              <input type="number" id="large-volume" value="1000" />
+            </div>
+          </div>
+
+          <div>
+            <h3>Pallet Dimensions</h3>
+            <div class="form-group">
+              <label for="pallet-length">Length (mm)</label>
+              <input type="number" id="pallet-length" value="1200" />
+            </div>
+            <div class="form-group">
+              <label for="pallet-width">Width (mm)</label>
+              <input type="number" id="pallet-width" value="800" />
+            </div>
+            <div class="form-group">
+              <label for="pallet-height">Maximum Height (mm)</label>
+              <input type="number" id="pallet-height" value="1800" />
+            </div>
+          </div>
+        </div>
+
+        <button id="calculate-btn" class="btn">Calculate Configurations</button>
+      </section>
+
+      <section class="results-section">
+        <h2>Results</h2>
+        <div class="results-grid">
+          <div class="result-card">
+            <h4>330ml Bottles per Layer</h4>
+            <div class="result-value" id="small-per-layer">216</div>
+            <div class="result-detail" id="small-layer-detail">
+              18 × 12 bottles
+            </div>
+          </div>
+
+          <div class="result-card">
+            <h4>1L Bottles per Layer</h4>
+            <div class="result-value" id="large-per-layer">104</div>
+            <div class="result-detail" id="large-layer-detail">
+              13 × 8 bottles
+            </div>
+          </div>
+
+          <div class="result-card">
+            <h4>Maximum Layers (330ml)</h4>
+            <div class="result-value" id="max-small-layers">11</div>
+            <div class="result-detail">
+              Total: <span id="total-small-bottles">2376</span> bottles
+            </div>
+          </div>
+
+          <div class="result-card">
+            <h4>Maximum Layers (1L)</h4>
+            <div class="result-value" id="max-large-layers">8</div>
+            <div class="result-detail">
+              Total: <span id="total-large-bottles">832</span> bottles
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="config-section">
+        <h2>Recommended Mixed Configurations</h2>
+        <div id="mixed-configs" class="config-options">
+          <!-- Mixed configurations will be added here -->
+        </div>
+      </section>
+
+      <section class="visual-section">
+        <h2>Pallet Visualization</h2>
+        <p>Representation of the selected configuration:</p>
+        <div class="palete-visualization">
+          <div class="palete-view">
+            <div class="palete-3d" id="palete-visual">
+              <div class="palete-base"></div>
+              <!-- Layers will be added here -->
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>
+          © 2025 Kombucha Bottle Pallet Calculator | Developed to optimize your
+          logistics
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
