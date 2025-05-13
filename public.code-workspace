@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"path": "../../LocalWP/pinkwolftattooshop/app/public"
+	},
+	{
+		"path": ".."
+	}
+],
+  "settings": {
+    "liveServer.settings.multiRootWorkspaceName": "visual_code"
+  }
+}
